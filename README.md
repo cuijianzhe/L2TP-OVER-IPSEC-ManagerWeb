@@ -12,6 +12,8 @@
 
 1、安装python环境；
 
+请自行安装 Python3.7环境
+
 2、安装Django；
 
 ```
@@ -43,6 +45,11 @@ userinfo_path = os.path.join(filedata_dir,"userinfo")  # 用户文件
 
 
 4、服务器部署
+
+```
+pip3 install django
+nohub python3 manage.py runserver 0.0.0.0:8000 >/var/log/web_l2tp.log 2<&1 &
+```
 
 
 
