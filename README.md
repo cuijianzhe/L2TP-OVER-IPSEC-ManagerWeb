@@ -59,12 +59,12 @@ nohub python3 manage.py runserver 0.0.0.0:8000 >/var/log/web_l2tp.log 2<&1 &
 
 6、系统效果展示
 
-![image](https://raw.githubusercontent.com/cuijianzhe/L2TP-OVER-IPSEC-Manager-Web/master/images/shouye.png)
-
-![images](https://raw.githubusercontent.com/cuijianzhe/L2TP-OVER-IPSEC-Manager-Web/master/images/index.png)
+![shouye.png](https://kyun.ltyuanfang.cn/tc/2020/05/30/abd487eca6676.png)
 
 
 
-![images](https://raw.githubusercontent.com/cuijianzhe/L2TP-OVER-IPSEC-Manager-Web/master/images/add.png)
+![add.png](https://kyun.ltyuanfang.cn/tc/2020/05/30/d57fa19fae049.png)
 
-![](https://raw.githubusercontent.com/cuijianzhe/L2TP-OVER-IPSEC-Manager-Web/master/images/change.png)
+![change.png](https://kyun.ltyuanfang.cn/tc/2020/05/30/6149d8c141a31.png)
+
+![index.png](https://kyun.ltyuanfang.cn/tc/2020/05/30/862e897a97d9c.png)
