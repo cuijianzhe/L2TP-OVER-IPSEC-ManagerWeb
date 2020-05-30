@@ -12,7 +12,7 @@
 
 1、安装python环境；
 
-请自行安装 Python3.7环境
+请自行安装 Python3.7环境+Django环境，可用nginx代理
 
 2、安装Django；
 
@@ -63,8 +63,8 @@ nohub python3 manage.py runserver 0.0.0.0:8000 >/var/log/web_l2tp.log 2<&1 &
 
 
 
+![index.png](https://kyun.ltyuanfang.cn/tc/2020/05/30/862e897a97d9c.png)
+
 ![add.png](https://kyun.ltyuanfang.cn/tc/2020/05/30/d57fa19fae049.png)
 
 ![change.png](https://kyun.ltyuanfang.cn/tc/2020/05/30/6149d8c141a31.png)
-
-![index.png](https://kyun.ltyuanfang.cn/tc/2020/05/30/862e897a97d9c.png)
