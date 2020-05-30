@@ -28,6 +28,7 @@ def login(request):
     res = auth(user,pwd)
     #做是否登陆成功的判断
     if res:
+        request.session.set_expiry(10) #session认证时间为10s，10s之后session认证失效
         request.session["is_login"] = "1"
         request.session["username"] = user
         request.session.set_expiry(0)  #session在关闭浏览器后失效
@@ -176,6 +177,8 @@ def add(request):
 
 @check_login
 def logout(request):
-    session.get("is_login")
-    session.clear() #清除所有session
+    request.session.get("is_login")
+    request.session.clear() #清除所有session
     return redirect('/login')
+
+

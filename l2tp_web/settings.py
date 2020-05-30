@@ -64,7 +64,7 @@ ROOT_URLCONF = 'l2tp_web.urls'
 
 #Session  配置
 SESSION_ENGINE = 'django.contrib.sessions.backends.file'
-SESSION_FILE_PATH = os.path.join(filedata_dir)  # 缓存文件路径，如果为None，则使用tempfile模块获取一个临时地址tempfile.gettempdir()
+SESSION_FILE_PATH = os.path.join(filedata_dir)  # session缓存文件路径，如果为None，则使用tempfile模块获取一个临时地址tempfile.gettempdir()
 
 
 
@@ -139,5 +139,5 @@ STATIC_URL = '/static/'
 
 #所有静态文件（css/js/图片）都放在static下面配置的文件夹中
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "/statics")
+    os.path.join(BASE_DIR, "static")
 ]
