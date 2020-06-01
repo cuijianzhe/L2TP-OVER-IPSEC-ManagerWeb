@@ -48,14 +48,14 @@ userinfo_path = os.path.join(filedata_dir,"userinfo")  # 用户文件
 
 ```
 pip3 install django
-nohub python3 manage.py runserver 0.0.0.0:8000 >/var/log/web_l2tp.log 2<&1 &
+nohub python3 manage.py runserver 0.0.0.0:8000 >>/var/log/web_l2tp.log 2<&1 &
 ```
 
 
 
 5、添加账户
 
-本系统中data目录下的userinfo下一行行添加账户与密码信息
+本系统中data目录下的userinfo下一行添加账户与密码信息(加盐处理)
 
 6、系统效果展示
 

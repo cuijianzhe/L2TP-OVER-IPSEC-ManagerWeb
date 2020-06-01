@@ -19,6 +19,7 @@ from django.urls import path
 from codeApp import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
+    path('', views.login),
     path('login/', views.login),
     path('index/', views.index),
     path('delete/', views.delete),
