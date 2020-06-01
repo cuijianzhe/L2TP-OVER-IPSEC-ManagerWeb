@@ -4,6 +4,7 @@ from functools import wraps
 import os
 import json
 import subprocess
+import hashlib
 # Create your views here.
 
 print(settings.userinfo_path)
@@ -24,8 +25,11 @@ def login(request):
     else:
         user = request.POST.get("user",None)
         pwd = request.POST.get('pwd',None)
-        print(user,pwd)
-    res = auth(user,pwd)
+        md5 = hashlib.md5()
+        md5.update(bytes(pwd,encoding='utf-8'))
+        md5_pwd = md5.hexdigest()
+        print(user,md5_pwd)
+    res = auth(user,md5_pwd)
     #做是否登陆成功的判断
     if res:
         request.session.set_expiry(10) #session认证时间为10s，10s之后session认证失效
