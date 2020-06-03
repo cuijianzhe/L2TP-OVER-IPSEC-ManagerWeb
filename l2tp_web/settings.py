@@ -16,8 +16,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-filedata_dir = os.path.join(BASE_DIR,"data")  #读取L2TP文件目录
-ipsecpwd_dir = os.path.join(BASE_DIR,"ipsec") #读取ipsec passwd文件
+filedata_dir = os.path.join("/etc/ppp")  #读取L2TP文件目录
+ipsecpwd_dir = os.path.join("/etc/ipsec.d") #读取ipsec passwd文件
 
 filedata_path=os.path.join(filedata_dir,"chap-secrets")  # 配置文件
 ipsecpwd_path = os.path.join(ipsecpwd_dir,"passwd")
@@ -35,7 +35,7 @@ SECRET_KEY = 'n6m$5+5yi+xl)979$^7e#-9f+c--(y0kfe#j-c@dqbr5h0+67z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [“*”]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -64,7 +64,8 @@ ROOT_URLCONF = 'l2tp_web.urls'
 
 #Session  配置
 SESSION_ENGINE = 'django.contrib.sessions.backends.file'
-SESSION_FILE_PATH = os.path.join(filedata_dir)  # session缓存文件路径，如果为None，则使用tempfile模块获取一个临时地址tempfile.gettempdir()
+#SESSION_FILE_PATH = os.path.join(filedata_dir)  # session缓存文件路径，如果为None，则使用tempfile模块获取一个临时地址tempfile.gettempdir()
+SESSION_FILE_PATH = os.path.join(BASE_DIR,'session')
 
 
 
